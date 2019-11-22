@@ -1,0 +1,112 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style5.css">
+	<script>
+	function convert()
+	{
+      
+		    var cc=document.getElementById('search').value;
+		    console.log(cc);
+			var xmlhttp= new XMLHttpRequest();
+			xmlhttp.open("GET","https://financialmodelingprep.com/api/v3/stock/real-time-price/"+cc, true);//async
+			
+			xmlhttp.send();
+			xmlhttp.onreadystatechange=function(){
+				if(this.readyState === 4 && this.status === 200 )
+				{
+					var result=this.responseText;
+			    	var jsResult=JSON.parse(result);
+          
+          console.log(jsResult.price);
+					
+		    document.getElementById('para').innerHTML=jsResult.price+"   real-time-price";
+					
+				}
+      }
+  }
+
+      function convert2()
+      {
+      
+		    var zz=document.getElementById('search').value;
+		    
+			var xmlhttp= new XMLHttpRequest();
+			xmlhttp.open("GET","https://financialmodelingprep.com/api/v3/historical-price-full/"+zz, true);//async
+			
+			xmlhttp.send();
+			xmlhttp.onreadystatechange=function(){
+				if(this.readyState === 4 && this.status === 200 )
+				{
+					var result1=this.responseText;
+			    	var jsResult1=JSON.parse(result1);
+          
+          console.log(jsResult1.historical[0].high);
+          console.log(jsResult1.historical[0].low);
+					
+		     document.getElementById('para2').innerHTML=jsResult1.historical[0].high+"  historical-price-recent-high ";
+		     document.getElementById('para3').innerHTML=jsResult1.historical[0].low+"   historical-price-recent-low";
+					
+				}
+      }
+}
+
+      function convert3()
+      {
+      
+		    var zz=document.getElementById('search').value;
+		    
+			var xmlhttp= new XMLHttpRequest();
+			xmlhttp.open("GET","https://financialmodelingprep.com/api/v3/company/discounted-cash-flow/"+zz, true);//async
+			
+			xmlhttp.send();
+			xmlhttp.onreadystatechange=function(){
+				if(this.readyState === 4 && this.status === 200 )
+				{
+					var result1=this.responseText;
+			    	var jsResult1=JSON.parse(result1);
+			    	var j=JSON.stringify(jsResult1);
+			    	console.log(jsResult1.DCF);
+          
+       
+		     document.getElementById('para4').innerHTML=jsResult1.DCF+"  discounted-cash-flow";
+		     
+					
+				}
+      }
+}
+//https://financialmodelingprep.com/api/v3/financial-statement-growth/AAPL
+    
+</script>
+
+	</head>
+
+<body>
+<div class="box">
+<input type="text" name="value" id="search">
+</div>
+<div class="click">
+
+<button  id="btn1" class="btn" onclick="convert()">Real-time-price</button>
+
+<button  id="btn2" class="btn" onclick="convert2()">Historical-price-full</button>
+
+<button  id="btn3" class="btn" onclick="convert3()">Discounted-cash-flow</button>
+
+</div>
+
+
+<h1>Real-time-price</h1>
+<p id="para"></p>
+
+
+<h1>Historical-price-full</h1>
+<p id="para2"></p>
+<p id="para3"></p>
+
+
+
+<h1>Discounted-cash-flow</h1>
+<p id="para4"></p>
+
+</body>
+</html>

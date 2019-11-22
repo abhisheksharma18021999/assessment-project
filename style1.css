@@ -1,0 +1,36 @@
+
+body{
+
+  background: url(b1.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+.card
+{
+box-shadow:0 4px 8px #8147ad;
+margin-top: 10%;
+width:auto;
+height:auto;
+background-color:#8147ad;
+text-align:center;
+border-radius:15px;
+}
+.card:hover{
+box-shadow:0 8px 16px ;
+}
+
+
+
+
+.fa:hover{
+opacity:1.0;
+}
+.quote,.author{
+padding:20px;
+font-family:Monotype Corsiva;
+font-size:27px;
+color: white;
+}
+

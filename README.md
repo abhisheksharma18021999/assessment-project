@@ -17,12 +17,26 @@ it give info about stock of a company.
 
 
 
+
+
+
+
+
+
 (2)quote=
  
  << 1 end point is used >>
 -------------------
 it tells about quote 
 )=https://api.forismatic.com/api/1.0/
+
+
+
+
+
+
+
+
 
 
 

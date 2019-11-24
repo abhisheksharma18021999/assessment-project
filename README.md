@@ -1,7 +1,7 @@
 this website is called "   UPDATED  " ............
  in this website there are 4 sites:--
 
-(1) stock =
+(1) STOCKS =
 
 << 3 end points are used >>
 --------------------
@@ -10,6 +10,7 @@ this website is called "   UPDATED  " ............
 )=https://financialmodelingprep.com/api/v3/historical-price-full/
 
 )=https://financialmodelingprep.com/api/v3/company/discounted-cash-flow/
+
 it give info about stock of a company.
 
 

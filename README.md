@@ -12,6 +12,7 @@ this website is called "   UPDATED  " ............
 )=https://financialmodelingprep.com/api/v3/company/discounted-cash-flow/
 
 it give info about stock of a company.
+-------------------------------------
 
 
 
@@ -23,13 +24,14 @@ it give info about stock of a company.
 
 
 
-(2)quote=
+(2)  QUOTE=
  
  << 1 end point is used >>
 -------------------
-it tells about quote 
 )=https://api.forismatic.com/api/1.0/
 
+it tells about quote .
+--------------------
 
 
 
@@ -41,11 +43,13 @@ it tells about quote
 
 
 
-(3) news head lines
+
+(3) NEWS HEADLINES =
 
 
 << 1 end point is used >>
 --------------------
 )=https://hn.algolia.com/api/v1/search?query=javascript
 
-it gives news headlines
+it gives news headlines.
+----------------------

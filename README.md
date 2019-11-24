@@ -1,5 +1,5 @@
 this website is called "   UPDATED  " ............
- in this website there are 4 sites:--
+ in this website there are 3 sites:--
 
 (1) STOCKS =
 
